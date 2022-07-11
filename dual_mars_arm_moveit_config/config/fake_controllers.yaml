@@ -1,0 +1,43 @@
+controller_list:
+  - name: fake_pan_pan_group_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - pan_pan_joint1
+      - pan_pan_joint2
+      - pan_pan_joint3
+      - pan_pan_joint4
+      - pan_pan_joint5
+      - pan_pan_joint6
+      - pan_pan_joint7
+  - name: fake_an_an_group_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - an_an_joint1
+      - an_an_joint2
+      - an_an_joint3
+      - an_an_joint4
+      - an_an_joint5
+      - an_an_joint6
+      - an_an_joint7
+  - name: fake_pan_pan_and_an_an_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - an_an_joint1
+      - an_an_joint2
+      - an_an_joint3
+      - an_an_joint4
+      - an_an_joint5
+      - an_an_joint6
+      - an_an_joint7
+      - pan_pan_joint1
+      - pan_pan_joint2
+      - pan_pan_joint3
+      - pan_pan_joint4
+      - pan_pan_joint5
+      - pan_pan_joint6
+      - pan_pan_joint7
+initial:  # Define initial robot poses per group
+#  - group: pan_pan_group
+#    pose: home
+
+  []

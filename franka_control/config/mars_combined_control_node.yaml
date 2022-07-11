@@ -1,0 +1,67 @@
+robot_hardware:
+  - pan_pan
+  - an_an
+
+pan_pan:
+  type: franka_hw/FrankaCombinableHW
+  arm_id: pan_pan
+  joint_names:
+    - pan_pan_joint1
+    - pan_pan_joint2
+    - pan_pan_joint3
+    - pan_pan_joint4
+    - pan_pan_joint5
+    - pan_pan_joint6
+    - pan_pan_joint7
+  # Configure the threshold angle for printing joint limit warnings.
+  joint_limit_warning_threshold: 0.1 # [rad]
+  # Activate rate limiter? [true|false]
+  rate_limiting: true
+  # Cutoff frequency of the low-pass filter. Set to >= 1000 to deactivate.
+  cutoff_frequency: 1000
+  # Internal controller for motion generators [joint_impedance|cartesian_impedance]
+  internal_controller: joint_impedance
+  # Used to decide whether to enforce realtime mode [enforce|ignore]
+  realtime_config: enforce
+  # Configure the initial defaults for the collision behavior reflexes.
+  collision_config:
+    lower_torque_thresholds_acceleration: [20.0, 20.0, 18.0, 18.0, 16.0, 14.0, 12.0]  # [Nm]
+    upper_torque_thresholds_acceleration: [20.0, 20.0, 18.0, 18.0, 16.0, 14.0, 12.0]  # [Nm]
+    lower_torque_thresholds_nominal: [20.0, 20.0, 18.0, 18.0, 16.0, 14.0, 12.0]  # [Nm]
+    upper_torque_thresholds_nominal: [20.0, 20.0, 18.0, 18.0, 16.0, 14.0, 12.0]  # [Nm]
+    lower_force_thresholds_acceleration: [20.0, 20.0, 20.0, 25.0, 25.0, 25.0]  # [N, N, N, Nm, Nm, Nm]
+    upper_force_thresholds_acceleration: [20.0, 20.0, 20.0, 25.0, 25.0, 25.0]  # [N, N, N, Nm, Nm, Nm]
+    lower_force_thresholds_nominal: [20.0, 20.0, 20.0, 25.0, 25.0, 25.0]  # [N, N, N, Nm, Nm, Nm]
+    upper_force_thresholds_nominal: [20.0, 20.0, 20.0, 25.0, 25.0, 25.0]  # [N, N, N, Nm, Nm, Nm]
+
+an_an:
+  type: franka_hw/FrankaCombinableHW
+  arm_id: an_an
+  joint_names:
+    - an_an_joint1
+    - an_an_joint2
+    - an_an_joint3
+    - an_an_joint4
+    - an_an_joint5
+    - an_an_joint6
+    - an_an_joint7
+  # Configure the threshold angle for printing joint limit warnings.
+  joint_limit_warning_threshold: 0.1 # [rad]
+  # Activate rate limiter? [true|false]
+  rate_limiting: true
+  # Cutoff frequency of the low-pass filter. Set to >= 1000 to deactivate.
+  cutoff_frequency: 1000
+  # Internal controller for motion generators [joint_impedance|cartesian_impedance]
+  internal_controller: joint_impedance
+  # Used to decide whether to enforce realtime mode [enforce|ignore]
+  realtime_config: enforce
+  # Configure the initial defaults for the collision behavior reflexes.
+  collision_config:
+    lower_torque_thresholds_acceleration: [20.0, 20.0, 18.0, 18.0, 16.0, 14.0, 12.0]  # [Nm]
+    upper_torque_thresholds_acceleration: [20.0, 20.0, 18.0, 18.0, 16.0, 14.0, 12.0]  # [Nm]
+    lower_torque_thresholds_nominal: [20.0, 20.0, 18.0, 18.0, 16.0, 14.0, 12.0]  # [Nm]
+    upper_torque_thresholds_nominal: [20.0, 20.0, 18.0, 18.0, 16.0, 14.0, 12.0]  # [Nm]
+    lower_force_thresholds_acceleration: [20.0, 20.0, 20.0, 25.0, 25.0, 25.0]  # [N, N, N, Nm, Nm, Nm]
+    upper_force_thresholds_acceleration: [20.0, 20.0, 20.0, 25.0, 25.0, 25.0]  # [N, N, N, Nm, Nm, Nm]
+    lower_force_thresholds_nominal: [20.0, 20.0, 20.0, 25.0, 25.0, 25.0]  # [N, N, N, Nm, Nm, Nm]
+    upper_force_thresholds_nominal: [20.0, 20.0, 20.0, 25.0, 25.0, 25.0]  # [N, N, N, Nm, Nm, Nm]

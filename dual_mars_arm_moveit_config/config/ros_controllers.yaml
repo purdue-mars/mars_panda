@@ -1,0 +1,180 @@
+pan_pan_group_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - pan_pan_joint1
+    - pan_pan_joint2
+    - pan_pan_joint3
+    - pan_pan_joint4
+    - pan_pan_joint5
+    - pan_pan_joint6
+    - pan_pan_joint7
+  gains:
+    pan_pan_joint1:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    pan_pan_joint2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    pan_pan_joint3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    pan_pan_joint4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    pan_pan_joint5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    pan_pan_joint6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    pan_pan_joint7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+an_an_group_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - an_an_joint1
+    - an_an_joint2
+    - an_an_joint3
+    - an_an_joint4
+    - an_an_joint5
+    - an_an_joint6
+    - an_an_joint7
+  gains:
+    an_an_joint1:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    an_an_joint2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    an_an_joint3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    an_an_joint4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    an_an_joint5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    an_an_joint6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    an_an_joint7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+pan_pan_and_an_an_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - an_an_joint1
+    - an_an_joint2
+    - an_an_joint3
+    - an_an_joint4
+    - an_an_joint5
+    - an_an_joint6
+    - an_an_joint7
+    - pan_pan_joint1
+    - pan_pan_joint2
+    - pan_pan_joint3
+    - pan_pan_joint4
+    - pan_pan_joint5
+    - pan_pan_joint6
+    - pan_pan_joint7
+  gains:
+    an_an_joint1:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    an_an_joint2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    an_an_joint3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    an_an_joint4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    an_an_joint5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    an_an_joint6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    an_an_joint7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    pan_pan_joint1:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    pan_pan_joint2:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    pan_pan_joint3:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    pan_pan_joint4:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    pan_pan_joint5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    pan_pan_joint6:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    pan_pan_joint7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
