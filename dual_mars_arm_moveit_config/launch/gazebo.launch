@@ -3,7 +3,7 @@
   <arg name="paused" default="false"/>
   <arg name="gazebo_gui" default="true"/>
   <arg name="initial_joint_positions" doc="Initial joint configuration of the robot"
-       default=""/>
+       default=" -J an_an_joint1 0 -J an_an_joint2 -0.785 -J an_an_joint3 0 -J an_an_joint4 -2.356 -J an_an_joint5 0 -J an_an_joint6 1.571 -J an_an_joint7 0.785 -J pan_pan_joint1 0 -J pan_pan_joint2 -0.785 -J pan_pan_joint3 0 -J pan_pan_joint4 -2.356 -J pan_pan_joint5 0 -J pan_pan_joint6 1.571 -J pan_pan_joint7 0.785"/>
 
   <!-- startup simulated world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -13,7 +13,7 @@
   </include>
 
   <!-- send robot urdf to param server -->
-  <param name="robot_description" command="xacro  '$(find franka_description)/robots/dual_panda_example.urdf.xacro'" />
+  <param name="robot_description" textfile="$(find dual_mars_arm_moveit_config)/config/gazebo_dual_mars_arm.urdf" />
 
   <!-- unpause only after loading robot model -->
   <arg name="unpause" value="$(eval '' if arg('paused') else '-unpause')" />

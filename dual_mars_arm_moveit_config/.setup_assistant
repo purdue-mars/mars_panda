@@ -1,11 +1,11 @@
 moveit_setup_assistant_config:
   URDF:
     package: franka_description
-    relative_path: robots/dual_panda_example.urdf.xacro
+    relative_path: robots/dual_mars_arm.urdf.xacro
     xacro_args: ""
   SRDF:
-    relative_path: config/panda.srdf
+    relative_path: config/dual_mars_arm.srdf.xacro
   CONFIG:
     author_name: Raghava Uppuluri
-    author_email: raghava.upp13@gmail.com
-    generated_timestamp: 1657545290
+    author_email: ruppulur@purdue.edu
+    generated_timestamp: 1657923644

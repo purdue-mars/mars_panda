@@ -37,11 +37,15 @@
                 " />
   -->
 
-  <arg name="load_robot_description" default="true" />
+  <arg name="load_robot_description" default="false" />
   <!-- load URDF, SRDF and joint_limits configuration -->
   <include file="$(dirname)/planning_context.launch">
     <arg name="load_robot_description" value="$(arg load_robot_description)" />
   </include>
+
+  <group ns="move_group">
+    <rosparam command="load" file="$(find dual_mars_arm_moveit_config)/config/kinematics.yaml"/>
+  </group>
 
   <!-- Planning Pipelines -->
   <group ns="move_group/planning_pipelines">

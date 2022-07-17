@@ -1,8 +1,4 @@
 <?xml version="1.0" ?>
 <launch>
-  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="pan_pan_controller an_an_controller pan_pan_and_an_an_controller"/>
-
-  <include file="$(find dual_mars_arm_moveit_config)/launch/move_group.launch">
-    <arg name="moveit_controller_manager" default="dual_mars_arm" />
-  </include>
+  <include file="$(find dual_mars_arm_moveit_config)/launch/move_group.launch"/>
 </launch>

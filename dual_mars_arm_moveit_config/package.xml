@@ -3,10 +3,10 @@
   <name>dual_mars_arm_moveit_config</name>
   <version>0.3.0</version>
   <description>
-     An automatically generated package with all the configuration and launch files for using the panda with the MoveIt Motion Planning Framework
+     An automatically generated package with all the configuration and launch files for using the dual_mars_arm with the MoveIt Motion Planning Framework
   </description>
-  <author email="raghava.upp13@gmail.com">Raghava Uppuluri</author>
-  <maintainer email="raghava.upp13@gmail.com">Raghava Uppuluri</maintainer>
+  <author email="ruppulur@purdue.edu">Raghava Uppuluri</author>
+  <maintainer email="ruppulur@purdue.edu">Raghava Uppuluri</maintainer>
 
   <license>BSD</license>
 

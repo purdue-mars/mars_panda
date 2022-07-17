@@ -127,8 +127,7 @@ planner_configs:
     sparse_delta_fraction: 0.25  # delta fraction for connection distance. This value represents the visibility range of sparse samples. default: 0.25
     dense_delta_fraction: 0.001  # delta fraction for interface detection. default: 0.001
     max_failures: 5000  # maximum consecutive failure limit. default: 5000
-pan_pan_group:
-  default_planner_config: RRTConnect
+pan_pan_arm:
   planner_configs:
     - AnytimePathShortening
     - SBL
@@ -156,8 +155,7 @@ pan_pan_group:
     - SPARStwo
   projection_evaluator: joints(pan_pan_joint1,pan_pan_joint2)
   longest_valid_segment_fraction: 0.005
-an_an_group:
-  default_planner_config: RRTConnect
+an_an_arm:
   planner_configs:
     - AnytimePathShortening
     - SBL
@@ -185,8 +183,7 @@ an_an_group:
     - SPARStwo
   projection_evaluator: joints(an_an_joint1,an_an_joint2)
   longest_valid_segment_fraction: 0.005
-pan_pan_and_an_an:
-  default_planner_config: RRTConnect
+combined_arms:
   planner_configs:
     - AnytimePathShortening
     - SBL

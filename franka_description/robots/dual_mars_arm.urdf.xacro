@@ -11,7 +11,7 @@
     <visual>
       <origin xyz="0 0 0.5" rpy="0 0 0"/>
       <geometry>
-        <box size="1 2 1" />
+        <box size="1.5 2 1" />
       </geometry>
       <material name="White">
         <color rgba="1.0 1.0 1.0 1.0"/>
@@ -20,17 +20,16 @@
     <collision>
       <origin xyz="0 0 0.5" rpy="0 0 0"/>
       <geometry>
-        <box size="1 2 1" />
+        <box size="1.5 2 1" />
       </geometry>
     </collision>
   </link>
 
-  <!-- right arm with gripper -->
-  <xacro:panda_arm arm_id="$(arg an_an_id)" connected_to="base"  xyz="0 -0.5 1" safety_distance="0.03"/>
-  <xacro:hand arm_id="$(arg an_an_id)" rpy="0 0 ${-pi/4}" connected_to="$(arg an_an_id)_link8" safety_distance="0.03"/>
+  <xacro:panda_arm arm_id="$(arg pan_pan_id)" connected_to="base"  xyz="-0.2336 -0.515 1"  safety_distance="0.005"/>
+  <!-- <xacro:hand arm_id="$(arg pan_pan_id)" rpy="0 0 ${-pi/4}" connected_to="$(arg pan_pan_id)_link8" safety_distance="0.005"/> -->
 
-  <!-- left arm with gripper -->
-  <xacro:panda_arm arm_id="$(arg pan_pan_id)" connected_to="base"  xyz="0 0.5 1" safety_distance="0.03"/>
-  <xacro:hand arm_id="$(arg pan_pan_id)" rpy="0 0 ${-pi/4}" connected_to="$(arg pan_pan_id)_link8" safety_distance="0.03"/>
+  <xacro:panda_arm arm_id="$(arg an_an_id)" connected_to="base"  xyz="0.2336 0.515 1" rpy="0 0 ${-pi}" safety_distance="0.005"/>
+  <!-- <xacro:hand arm_id="$(arg an_an_id)" rpy="0 0 ${-pi/4}" connected_to="$(arg an_an_id)_link8" safety_distance="0.005"/> -->
+
 
 </robot>

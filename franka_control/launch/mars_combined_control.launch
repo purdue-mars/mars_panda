@@ -10,7 +10,7 @@
   <arg name="args" default="" />
 
   <!-- The name of the combined robot, used as control node name -->
-  <arg name="robot_id" default="combined_mars_arms" />
+  <arg name="robot_id" default="mars_arms" />
 
   <!-- The config file containing all parameters for the combined hardware node like the IPs of the robots etc. -->
   <arg name="hw_config_file" default="$(find franka_control)/config/mars_combined_control_node.yaml"/>
@@ -23,7 +23,7 @@
   <arg name="controllers_file" default="$(find franka_control)/config/mars_combined_controllers.yaml" />
 
   <!-- The space separated list of controllers to start in this launch files. The controllers should be known from the controllers_file -->
-  <arg name="controllers_to_start" default="pan_pan_state_controller an_an_state_controller"/>
+  <arg name="controllers_to_start" default="pan_pan_state_controller an_an_state_controller combined_arms_controller"/>
 
   <!-- The list of the joint_states topics of all combined robots to fuse to a complete topic -->
   <arg name="joint_states_source_list" default="[pan_pan_state_controller/joint_states, an_an_state_controller/joint_states, pan_pan/franka_gripper/joint_states, an_an/franka_gripper/joint_states]"/>
