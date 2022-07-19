@@ -31,5 +31,28 @@
   <xacro:panda_arm arm_id="$(arg an_an_id)" connected_to="base"  xyz="0.2336 0.515 1" rpy="0 0 ${-pi}" safety_distance="0.005"/>
   <!-- <xacro:hand arm_id="$(arg an_an_id)" rpy="0 0 ${-pi/4}" connected_to="$(arg an_an_id)_link8" safety_distance="0.005"/> -->
 
+  <link name="camera_mount">
+    <visual>
+      <origin xyz="0 0 0.23" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.15 0.15 0.46" />
+      </geometry>
+      <material name="White">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.23" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.15 0.15 0.46" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="$(arg pan_pan_id)_d455_0_mount" type="fixed">
+     <origin xyz="0.15 -0.35 0.0" rpy="0 0 0"/>
+     <parent link="$(arg pan_pan_id)_link0"/>
+     <child link="camera_mount" />
+  </joint>
 
 </robot>
