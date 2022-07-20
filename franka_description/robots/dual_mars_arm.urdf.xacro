@@ -5,6 +5,7 @@
 
   <xacro:include filename="$(find franka_description)/robots/panda_arm.xacro"/>
   <xacro:include filename="$(find franka_description)/robots/hand.xacro"/>
+  <xacro:include filename="$(find wsg_32_description)/robots/wsg_32_description.urdf.xacro"/>
 
   <!-- box shaped table as base for the 2 Pandas -->
   <link name="base">
@@ -14,7 +15,7 @@
         <box size="1.5 2 1" />
       </geometry>
       <material name="White">
-        <color rgba="1.0 1.0 1.0 1.0"/>
+        <color rgba="1.0 1.0 1.0 1.0"/>For our research task, it
       </material>
     </visual>
     <collision>
@@ -27,8 +28,10 @@
 
   <xacro:panda_arm arm_id="$(arg pan_pan_id)" connected_to="base"  xyz="-0.2336 -0.515 1"  safety_distance="0.005"/>
   <!-- <xacro:hand arm_id="$(arg pan_pan_id)" rpy="0 0 ${-pi/4}" connected_to="$(arg pan_pan_id)_link8" safety_distance="0.005"/> -->
+  <xacro:wsg_32_xacro name="wsg_pan_pan" parent="$(arg pan_pan_id)_link8"  xyz="0 0 0.01" />
 
   <xacro:panda_arm arm_id="$(arg an_an_id)" connected_to="base"  xyz="0.2336 0.515 1" rpy="0 0 ${-pi}" safety_distance="0.005"/>
+  <xacro:wsg_32_xacro name="wsg_an_an" parent="$(arg an_an_id)_link8"  xyz="0 0 0.01" />
   <!-- <xacro:hand arm_id="$(arg an_an_id)" rpy="0 0 ${-pi/4}" connected_to="$(arg an_an_id)_link8" safety_distance="0.005"/> -->
 
   <link name="camera_mount">
