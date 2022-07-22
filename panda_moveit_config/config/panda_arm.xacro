@@ -60,5 +60,12 @@
     <disable_collisions link1="${prefix}_link6" link2="${prefix}_link7" reason="Adjacent" />
     <disable_collisions link1="${prefix}_link6" link2="${prefix}_link8" reason="Default" />
     <disable_collisions link1="${prefix}_link7" link2="${prefix}_link8" reason="Adjacent" />
+    <disable_collisions link1="${prefix}_wsg_base_link" link2="${prefix}_wsg_base_link_gripper_left"/>
+    <disable_collisions link1="${prefix}_wsg_base_link" link2="${prefix}_wsg_base_link_gripper_right"/>
+    <disable_collisions link1="${prefix}_wsg_base_link_gripper_left" link2="${prefix}_wsg_base_link_gripper_right"/>
+    <disable_collisions link1="${prefix}_wsg_base_link_gripper_left" link2="${prefix}_wsg_left_gelsight_finger_link"/>
+    <disable_collisions link1="${prefix}_wsg_base_link_gripper_right" link2="${prefix}_wsg_right_gelsight_finger_link"/>
+    <disable_collisions link1="${prefix}_link7" link2="${prefix}_wsg_base_link"/>
+    <disable_collisions link1="${prefix}_link8" link2="${prefix}_wsg_base_link"/>
   </xacro:macro>
 </robot>

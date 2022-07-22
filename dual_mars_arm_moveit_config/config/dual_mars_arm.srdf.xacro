@@ -49,17 +49,5 @@
   <disable_collisions link1="base" link2="$(arg arm_2_id)_link2" reason="Never"/>
   <disable_collisions link1="base" link2="$(arg arm_2_id)_link3" reason="Never"/>
   <disable_collisions link1="base" link2="$(arg arm_2_id)_link4" reason="Never"/>
-  <disable_collisions link1="an_an_link7" link2=" wsg_an_an_base_link" reason="Adjacent"/>
-<disable_collisions link1="base" link2="camera_mount" reason="Adjacent"/>
-<disable_collisions link1="pan_pan_link7" link2="wsg_pan_pan_base_link"/>
-<disable_collisions link1="wsg_an_an_base_link" link2="wsg_an_an_base_link_gripper_left"/>
-<disable_collisions link1="wsg_an_an_base_link" link2="wsg_an_an_base_link_gripper_right"/>
-<disable_collisions link1="wsg_an_an_base_link_gripper_left" link2="wsg_an_an_base_link_gripper_right"/>
-<disable_collisions link1="wsg_an_an_base_link_gripper_left" link2="wsg_an_an_left_gelsight_finger_link"/>
-<disable_collisions link1="wsg_an_an_base_link_gripper_right" link2="wsg_an_an_right_gelsight_finger_link"/>
-<disable_collisions link1="wsg_pan_pan_base_link" link2="wsg_pan_pan_base_link_gripper_left"/>
-<disable_collisions link1="wsg_pan_pan_base_link" link2="wsg_pan_pan_base_link_gripper_right"/>
-<disable_collisions link1="wsg_pan_pan_base_link_gripper_left" link2="wsg_pan_pan_base_link_gripper_right"/>
-<disable_collisions link1="wsg_pan_pan_base_link_gripper_left" link2="wsg_pan_pan_left_gelsight_finger_link"/>
-<disable_collisions link1="wsg_pan_pan_base_link_gripper_right" link2="wsg_pan_pan_right_gelsight_finger_link"/>
+  <disable_collisions link1="base" link2="camera_mount" reason="Adjacent"/>
 </robot>
