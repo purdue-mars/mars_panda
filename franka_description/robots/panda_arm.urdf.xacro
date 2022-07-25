@@ -13,7 +13,7 @@
     <xacro:include filename="$(find franka_description)/robots/panda_arm.xacro" />
     <xacro:panda_arm arm_id="$(arg arm_id)" safety_distance="0.03"/>
     <xacro:include filename="$(find wsg_32_description)/robots/wsg_32_description.urdf.xacro"/>
-    <xacro:wsg_32_xacro name="$(arg arm_id)_wsg" parent="$(arg arm_id)_link8"  xyz="0 0 0.01" rpy="0 0 -${pi/2}"/>
+    <xacro:wsg_32_xacro name="$(arg arm_id)_wsg" parent="$(arg arm_id)_link8"  xyz="0 0 0.01" rpy="0 0 -${pi/4}"/>
 
     <xacro:if value="$(arg hand)">
       <xacro:include filename="$(find franka_description)/robots/hand.xacro"/>
