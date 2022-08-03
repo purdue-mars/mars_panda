@@ -273,7 +273,7 @@
     name="${name}_left_gelsight_finger_pad_joint"
     type="fixed">
     <origin
-      xyz="0 0.0742 0"/>
+      xyz="0 0.07067 0" rpy="0 ${pi/2} 0"/>
     <parent link="${name}_left_gelsight_finger_link" />
     <child link="${name}_left_gelsight_finger_pad" />
   </joint>
@@ -284,7 +284,7 @@
     name="${name}_right_gelsight_finger_pad_joint"
     type="fixed">
     <origin
-      xyz="0 0.0742 0"/>
+      xyz="-0.015 0.07067 0" rpy="0 ${pi/2} 0"/>
     <parent link="${name}_right_gelsight_finger_link" />
     <child link="${name}_right_gelsight_finger_pad" />
   </joint>
