@@ -13,11 +13,11 @@
     <xacro:include filename="$(find franka_description)/robots/panda_arm.xacro" />
     <xacro:panda_arm arm_id="$(arg arm_id)" safety_distance="0.03"/>
     <xacro:include filename="$(find wsg_32_description)/robots/wsg_32_description.urdf.xacro"/>
-    <xacro:wsg_32_xacro name="$(arg arm_id)_wsg" parent="$(arg arm_id)_link8"  xyz="0 0 0.01" rpy="0 0 -${pi/4}"/>
+    <xacro:wsg_32_xacro name="$(arg arm_id)_wsg" parent="$(arg arm_id)_link8"  xyz="0 0 0.01" rpy="0 0 -${pi/2}"/>
 
     <xacro:if value="$(arg hand)">
       <xacro:include filename="$(find franka_description)/robots/hand.xacro"/>
-      <xacro:hand arm_id="$(arg arm_id)" rpy="0 0 ${-pi/4}" connected_to="$(arg arm_id)_link8" safety_distance="0.03"/>
+      <xacro:hand arm_id="$(arg arm_id)" rpy="0 0 ${-pi/2}" connected_to="$(arg arm_id)_link8" safety_distance="0.03"/>
     </xacro:if>
     <link name="world" />
     <joint name="world_joint" type="fixed">
@@ -25,6 +25,13 @@
       <child  link="$(arg arm_id)_link0" />
     </joint>
   </xacro:unless>
+
+  <link name="$(arg arm_id)_base_plate" />
+  <joint name="$(arg arm_id)_base_plate_joint" type="fixed">
+    <origin xyz="0.125855 -0.34327 -0.00525" rpy="0 0 0" />
+    <parent link="$(arg arm_id)_link0" />
+    <child link="$(arg arm_id)_base_plate" />
+  </joint>
 
   <xacro:if value="$(arg gazebo)">
 

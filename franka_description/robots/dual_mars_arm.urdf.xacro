@@ -32,6 +32,13 @@
 
   <xacro:panda_arm arm_id="$(arg an_an_id)" connected_to="base"  xyz="0.2301 0.5065 1.005" rpy="0 0 ${-pi}" safety_distance="0.005"/>
   <xacro:wsg_32_xacro name="$(arg an_an_id)_wsg" parent="$(arg an_an_id)_link8"  xyz="0 0 0.01" rpy="0 0 ${-pi/2}"/>
+
+  <link name="$(arg pan_pan_id)_base_plate" />
+  <joint name="$(arg pan_pan_id)_base_plate_joint" type="fixed">
+    <origin xyz="0.125855 -0.34327 -0.00525" rpy="0 0 0" />
+    <parent link="$(arg pan_pan_id)_link0" />
+    <child link="$(arg pan_pan_id)_base_plate" />
+  </joint>
   <!-- <xacro:hand arm_id="$(arg an_an_id)" rpy="0 0 ${-pi/4}" connected_to="$(arg an_an_id)_link8" safety_distance="0.005"/> -->
 
   <link name="camera_mount">
